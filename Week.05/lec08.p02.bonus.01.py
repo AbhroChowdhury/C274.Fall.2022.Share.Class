@@ -80,9 +80,5 @@ while cFlag:
         break
     place[line1] = line2
 
-for i in place.keys():
-    print(i)
-print()
-for i in place.values():
-    print(i)
+print(place)
 
