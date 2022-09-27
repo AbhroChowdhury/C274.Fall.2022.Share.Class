@@ -1,5 +1,5 @@
 now:
-	python3 hyp.py
+	python3 lec08.p02.bonus.01.py
 
 push:
 	git commit -a
