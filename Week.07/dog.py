@@ -1,5 +1,4 @@
 class Dog:
-    # def __init__(self, age=None, colour=None, size=None):
     def __init__(self, age=0, colour="brown", size="medium"):
         self.age = age
         self.colour = colour
@@ -8,6 +7,10 @@ class Dog:
     def __str__(self):
         s = "I am a " + self.colour + " dog, of age "
         s += str(self.age)+", of size "+self.size
+        return(s)
+
+    def __repr__(self):
+        s = "Id<"+ str(id(self)) + "> " + self.colour + " dog"
         return(s)
 
     def wag_tail(self, speed="slowly"):
