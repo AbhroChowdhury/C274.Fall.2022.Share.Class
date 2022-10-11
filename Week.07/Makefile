@@ -1,12 +1,6 @@
 now:
-	python3 mp.dt.v1.py
-
-all:
-	python3 mp.dt.v1.py
-	python3 mp.dt.v2.py
-	python3 mp.dt.v3.py
-	python3 mp.dt.v4.py
-	python3 mp.ft.py
+	make p8
+	make v9
 
 p8:
 	python3 count.the.p8.py
