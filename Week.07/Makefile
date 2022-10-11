@@ -1,4 +1,8 @@
 now:
+	python3 driver.dog.py
+	pep8 dog.py
+
+test:
 	make p8
 	make v9
 
