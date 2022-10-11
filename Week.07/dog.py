@@ -9,6 +9,7 @@ class Dog:
         s += str(self.age)+", of size "+self.size
         return(s)
 
+    # This type constructor makes "marginal" sense
     def __int__(self):
         return(id(self))
 
