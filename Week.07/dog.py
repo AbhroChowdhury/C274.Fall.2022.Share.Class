@@ -9,8 +9,11 @@ class Dog:
         s += str(self.age)+", of size "+self.size
         return(s)
 
+    def __int__(self):
+        return(id(self))
+
     def __repr__(self):
-        s = "Id<"+ str(id(self)) + "> " + self.colour + " dog"
+        s = "Id<" + str(id(self)) + "> " + self.colour + " dog"
         return(s)
 
     def wag_tail(self, speed="slowly"):
