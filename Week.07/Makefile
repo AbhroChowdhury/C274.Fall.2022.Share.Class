@@ -1,4 +1,7 @@
 now:
+	python3 mytimer.py
+
+old:
 	python3 mytimer_start.py
 
 lec12:

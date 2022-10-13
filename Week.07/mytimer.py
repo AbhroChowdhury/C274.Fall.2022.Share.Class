@@ -17,7 +17,9 @@ class TimeObj():
             print(self._msg,self.__str__())
 
     def __str__(self):
+        assert(self._tock_save > self._tick_save), "Non-monotonic"
         t = self._tock_save - self._tick_save
+        assert(float(t)>0.0), "Non-monotonic 2"
         s = ("%f" % (t)) + "s"
         return(s)
 
