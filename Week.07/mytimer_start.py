@@ -15,7 +15,7 @@ class TimeObj():
     # Code here
 
 
-# Not the cleaverest way to do this
+# Not the cleverest way to do this
 def rand_list_ints(l,num):
     for i in range(num):
         l.append(random.randint(0,10000000))
