@@ -15,6 +15,16 @@ p8:
 v9:
 	python3 count.the.v09.py
 
+v12:
+	python3 count.the.v12.py data.v1
+
+ws2:
+	make lec13ws2
+
+lec13ws2:
+	python3 count.the.v12.py data.v1
+	python3 count.the.v12.ws2.py data.v1
+	
 push:
 	git commit -a
 	git push
