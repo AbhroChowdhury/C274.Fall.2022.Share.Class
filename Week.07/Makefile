@@ -1,5 +1,9 @@
 now:
 	python3 mytimer.py
+	python3  mytimer_pep8.py
+
+pep8:
+	pep8 mytimer_pep8.py
 
 old:
 	python3 mytimer_start.py

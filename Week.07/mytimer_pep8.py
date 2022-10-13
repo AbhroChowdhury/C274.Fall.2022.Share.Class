@@ -1,6 +1,7 @@
 import time
 import random
 
+
 class TimeObj():
     def __init__(self, msg=""):
         self._msg = msg
@@ -8,13 +9,13 @@ class TimeObj():
         self.tick()
         self.tock()
 
-    def tick(self,print_clock=False):
+    def tick(self, print_clock=False):
         self._tick_save = time.perf_counter()
 
-    def tock(self,print_clock=False):
+    def tock(self, print_clock=False):
         self._tock_save = time.perf_counter()
         if(print_clock):
-            print(self._msg,self.__str__())
+            print(self._msg, self.__str__())
 
     def __str__(self):
         t = self._tock_save - self._tick_save
@@ -23,9 +24,9 @@ class TimeObj():
 
 
 # Not the cleverest way to do this
-def rand_list_ints(l,num):
+def rand_list_ints(l, num):
     for i in range(num):
-        l.append(random.randint(0,10000000))
+        l.append(random.randint(0, 10000000))
 
 
 def test_main():
@@ -33,7 +34,7 @@ def test_main():
 
     b = TimeObj("Create:")
     my_list = []
-    rand_list_ints(my_list,1000000)
+    rand_list_ints(my_list, 1000000)
     b.tock(True)
 
     c = TimeObj("Sort:")
@@ -41,9 +42,10 @@ def test_main():
     my_list.sort()
     c.tock()
 
-    print("Sorting:",c)
+    print("Sorting:", c)
 
     a.tock(True)
+
 
 if __name__ == "__main__":
     test_main()
