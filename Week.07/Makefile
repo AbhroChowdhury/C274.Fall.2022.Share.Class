@@ -1,4 +1,7 @@
 now:
+	python3 mytimer_start.py
+
+lec12:
 	python3 driver.dog.py
 	pep8 dog.py
 
