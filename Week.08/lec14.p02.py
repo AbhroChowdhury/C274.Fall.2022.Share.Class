@@ -7,6 +7,7 @@ class VStore:
     def add(self, value):
         # Make add() polymorphic by checking type
         # print(type(value))
+        # NOTE: Python has isinstance()
         if type(value) is int:
             self.store[value] = True
         elif type(value) is list:
