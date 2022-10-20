@@ -13,3 +13,24 @@ p02:
 
 base:
 	python3 ooclassifierbase.py helpdata.v1
+
+slide133:
+	python3 ooclassifierbase.py data.v1
+
+slide137:
+	python3 ooclassifierbasev2.py data.v1
+
+slide138:
+	python3 ooclassifierbasev2.py header.v1 data.v1.noheader
+
+slide139:
+	python3 ooclassifierbasev2.py helpdata.v1
+
+slide145:
+	python3 ooclassifierbasev3.py data.v1
+
+slide146:
+	python3 ooclassifierbasev3.py header.v1 data.v1.noheader
+
+slide147:
+	python3 ooclassifierbasev3.py helpdata.v1
