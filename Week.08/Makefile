@@ -11,6 +11,21 @@ p02:
 	python3 vstore.v1.py
 	python3 lec14.p02.py
 
+lec15p01:
+	python3 ooclassifierbasev3.py helpdata.v1
+	python3 ooclassifierbasev3.py helpdata.testp01
+	# python3 ooclassifierbasev3.py helpdata.p01
+
+lec15p02:
+	python3 ooclassifierbasev3.py helpdata.v1
+	python3 ooclassifierbasev3.py helpdata.testp02
+	# python3 ooclassifierbasev3.py helpdata.p02
+
+lec15p03:
+	python3 ooclassifierbasev3.py helpdata.v1
+	python3 ooclassifierbasev3.py helpdata.testp03
+	# python3 ooclassifierbasev3.py helpdata.p03
+
 base:
 	python3 ooclassifierbase.py helpdata.v1
 
