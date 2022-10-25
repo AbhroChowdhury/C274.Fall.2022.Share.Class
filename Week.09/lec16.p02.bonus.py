@@ -62,6 +62,7 @@ def main():
     b4 = TreeBranch(None,b3)
     b5 = TreeBranch(None,b4)
 
+    # Root node
     b6 = TreeBranch(b2,b5)
 
     mytree = b6
