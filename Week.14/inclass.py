@@ -35,36 +35,37 @@ def main():
     for w in spam.keys():
         print( "p( %s | S ) = %f" % (w, spam[w] / float(spam_words)) )
 
-    print()
 
+    # p( F_1 | C ) == p( "Dear" | Normal )
     norm1 = norm[ "Dear" ] / float(norm_words)
-    norm1 *= norm[ "Friend" ] / float(norm_words)
+    # p( F_2 | C ) == p( "Fried" | Normal )
+    norm2 = norm[ "Friend" ] / float(norm_words)
+    norm1 = norm1 *  norm2
+    print( "Likelihood: ", norm1)
 
-    spam1 = spam[ "Dear" ] / float(spam_words)
-    spam1 *= spam[ "Friend" ] / float(spam_words)
-
-    # NOTE:  The following line/version is WRONG WRONG WRONG
-    # spam1 = ( spam[ "Dear" ] * spam[ "Friend" ] ) / float(spam_words)
-
-    print( "Likelihoods: ", norm1, spam1 )
-
+    # TODO: answer_norm_prob = float(norm_msg/(norm_msg+spam_msg) )
+    # p(n)
     p_N = norm_msg / float(norm_msg + spam_msg)
+    print( "Prior: ", p_N)
+    print( "Posterior: ", p_N * norm1)
+
+    # p( F_1 | Spam ) == p( "Dear" | Spam )
+    spam1 = spam[ "Dear" ] / float(spam_words)
+    # p( F_2 | Spam ) == p( "Fried" | Normal )
+    spam2 = spam[ "Friend" ] / float(spam_words)
+    spam1 = spam1 *  spam2
+    print( "Likelihood: ", spam1)
+
+    # p(n)
     p_S = spam_msg / float(norm_msg + spam_msg)
+    print( "Prior: ", p_S)
+    print( "Posterior: ", p_S * spam1)
 
-    print( "Priors: ", p_N, p_S )
-
-    norm1 *= p_N
-    spam1 *= p_S
-
-    print()
-
-    print( "Normal = ", norm1 )
-    print( "Spam   = ", spam1 )
-
-    if norm1 > spam1:
-        print( "Normal message" )
+    # argmax C
+    if (p_N * norm1) > (p_S * spam1):
+        print( "Normal")
     else:
-        print( "Spam message" )
+        print( "Spam")
 
 if __name__ == "__main__":
     main()
