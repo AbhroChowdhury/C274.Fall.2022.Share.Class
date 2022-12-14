@@ -19,7 +19,11 @@ def open_file(filename=InputFilename):
             print("Other OS Error")
         return(sys.stdin)
 
-
+'''
+just adding in a function that allows us to now write to files as well
+'''
+    
+    
 def open_output(filename=OutputFilename):
     try:
         f = open(filename, "w")
@@ -37,7 +41,7 @@ def open_output(filename=OutputFilename):
 
 def safe_input(f=None, out=None, prompt=""):
     if out is None:
-        out = sys.stdout
+        out = sys.stdout.  # destination for any output from the program
     try:
         # Case:  Stdin
         if f is sys.stdin or f is None:
