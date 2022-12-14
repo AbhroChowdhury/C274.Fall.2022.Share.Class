@@ -1,4 +1,9 @@
-def safe_input( prompt ):
+'''
+safe input ensures that when we get to the end of the line, the while loop breaks. It returns the word in the prompt file on each iteration. When the 
+EOFError occurs, the function will start to return false and the loop will eventually stop. 
+'''
+
+def safe_input( prompt ):  
     try:
         word = input( prompt )
         return( word, True )
@@ -18,5 +23,5 @@ while cFlag:
     elif word != '':
         if word not in nonTarget:
             nonTarget.append(word)
-print( "All words:%3s. Target words:%3s" % (allWords,theCount) )
+print( "All words:%3s. Target words:%3s" % (allWords,theCount) ) #%3s means that the minimum width of the string printed has to be 3
 print( "Non-Target words: ", nonTarget )
