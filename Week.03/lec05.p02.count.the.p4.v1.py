@@ -1,3 +1,7 @@
+'''
+same as the other files, with few slight tweaks
+'''
+
 def safe_input( prompt ):
     try:
         word = input( prompt )
@@ -11,7 +15,7 @@ nonTarget = []
 cFlag = True
 while cFlag:
     word,cFlag = safe_input("")
-    for w in word.split():
+    for w in word.split():   # word.split() will split the string based on whitespace
         if cFlag:
             allWords = allWords + 1
         if w in [ 'the', 'The' ]:
