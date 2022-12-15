@@ -64,6 +64,10 @@ def safe_input(f=None, out=None, prompt=""):
     except EOFError:
         return("", False)
 
+'''
+just added a part where we are looping through the keys first and then the values
+'''
+    
 for i in place.keys():
     print(i)
 print()
