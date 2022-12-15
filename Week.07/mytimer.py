@@ -1,11 +1,11 @@
 import time
 import random
 
-class TimeObj():
+class TimeObj(): 
     def __init__(self, msg=""):
         self._msg = msg
         self._start = time.perf_counter()
-        self.tick()
+        self.tick() # from library
         self.tock()
 
     def tick(self,print_clock=False):
