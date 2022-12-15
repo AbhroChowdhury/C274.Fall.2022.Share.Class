@@ -53,6 +53,9 @@ def print_training_data_obj(inObjList, inObjHash):
         # print("-->", inObjHash[i]["words"])
         i += 1
 
+'''
+added function to process the input line
+'''
 
 def process_input_line(line):
     # We will want to get rid of global variables, as much as possible
